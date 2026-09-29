@@ -5,7 +5,7 @@ export default function AppLogo({ size = 32 }) {
   return (
     <img
       src={logo}
-      alt="لوگو کیندی‌مانی"
+      alt="لوگو مانی بی (Money Bee)"
       style={{
         width: size,
         height: size,

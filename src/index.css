@@ -1,4 +1,4 @@
-/* KiddoMoney Design System - Glovo Warm Amber & Teal Aesthetics */
+/* Money Bee Design System - Fresh Green & Honey Yellow Aesthetics */
 :root {
   --primary-yellow: #FFC244;
   --primary-yellow-hover: #EBB036;
@@ -51,13 +51,25 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  height: 100%;
+}
+
+html {
+  /* mobile viewport height follows the real visible area (no jump when browser UI hides/shows) */
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: var(--font-family);
   background-color: #0E1726;
   color: var(--text-primary);
-  min-height: 100vh;
+  height: 100%;
   direction: rtl;
-  overflow-x: hidden;
+  /* App-like scroll: the page itself never scrolls or bounces; only inner panels scroll */
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 button {

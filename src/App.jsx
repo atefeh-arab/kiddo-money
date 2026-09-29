@@ -174,18 +174,20 @@ export default function App() {
 
   return (
     <div style={{
-      minHeight: '100vh',
+      height: '100dvh',
       backgroundColor: '#E9F0DC',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '12px 8px 30px',
-      fontFamily: 'Vazirmatn, sans-serif'
+      padding: '12px 8px 16px',
+      fontFamily: 'Vazirmatn, sans-serif',
+      overflow: 'hidden'
     }}>
       {/* Top Green Wave App Bar */}
       <header style={{
         maxWidth: '520px',
         width: '100%',
+        flexShrink: 0,
         background: 'linear-gradient(180deg, #A9D295 0%, #CBE5B4 100%)',
         borderRadius: '0 0 30px 30px',
         padding: '14px 16px 24px',
@@ -204,8 +206,14 @@ export default function App() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', position: 'relative' }}>
           <AppLogo size={34} />
           <div>
-            <div style={{ fontSize: '15px', fontWeight: '900', color: '#1E4D33' }}>
-              کیدو مانی
+            <div style={{ fontSize: '15px', fontWeight: '900', color: '#1E4D33', lineHeight: 1.1 }}>
+              مانی بی
+            </div>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: '#3E7B4F', letterSpacing: '0.5px' }}>
+              MONEY BEE
+            </div>
+            <div style={{ fontSize: '9px', fontWeight: '700', color: '#4E7A5A' }}>
+              همبازی پول‌های کوچولو
             </div>
           </div>
         </div>
@@ -310,8 +318,8 @@ export default function App() {
         backgroundColor: '#F7F9F0',
         borderRadius: '30px',
         overflow: 'hidden',
-        height: activePlayableGame ? '740px' : '780px',
-        maxHeight: 'calc(100vh - 90px)',
+        flex: 1,
+        minHeight: 0,
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
